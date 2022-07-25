@@ -25,6 +25,57 @@ main {
   grid-area: main;
   width: 66vw;
   background-color: #222;
+  padding: 1.5em 2em;
+}
+.main-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-navigation {
+  display: flex;
+  width: 5.5vw;
+  height: 6vh;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-navigation i {
+  font-size: 190%;
+  color: grey;
+  background-color: transparent;
+  cursor: pointer;
+}
+.main-navigation i:hover {
+  opacity: 0.7;
+}
+.profile {
+  display: flex;
+  align-items: center;
+  width: 10vw;
+  justify-content: space-between;
+  border-radius: 1.5rem;
+  padding: 0.25rem;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.profile img {
+  width: 2rem;
+  height: 2rem;
+}
+.profile img:hover {
+  opacity: 1;
+}
+.profile p {
+  color: #fff;
+  font-weight: bold;
+  cursor: default;
+}
+.profile span {
+  color: white;
+  font-size: 190%;
+  cursor: pointer;
+}
+.profile span:hover {
+  opacity: 0.5;
 }
 .left {
   grid-area: nav;
@@ -130,6 +181,11 @@ img {
   background-repeat: no-repeat;
   border: 1px solid;
   border-radius: 50%;
+  cursor: default;
+  border: none;
+}
+img:hover {
+  opacity: 0.5;
 }
 
 .recent {
@@ -144,7 +200,6 @@ img {
 .recent-dashboard {
   display: flex;
   flex-direction: column;
-  /* margin-left: 0.5rem; */
 }
 .recent-name-day {
   display: flex;
@@ -153,6 +208,7 @@ img {
   text-transform: uppercase;
   font-size: 120%;
   font-weight: bold;
+  flex: 1;
 }
 .recent-name-day > p:nth-child(2) {
   margin-left: 5rem;
@@ -160,6 +216,9 @@ img {
 .recent-album {
   display: flex;
   align-items: center;
+}
+.recent-album span {
+  font-size: inherit;
 }
 
 @media only screen and (max-width: 800px) {
