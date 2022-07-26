@@ -23,7 +23,7 @@
 }
 main {
   grid-area: main;
-  width: 66vw;
+  width: 62vw;
   background-color: #222;
   padding: 1.5em 2em;
 }
@@ -51,7 +51,8 @@ main {
 .profile {
   display: flex;
   align-items: center;
-  width: 10vw;
+  max-width: 10vw;
+  min-width: fit-content;
   justify-content: space-between;
   border-radius: 1.5rem;
   padding: 0.25rem;
@@ -83,7 +84,7 @@ main {
   padding-left: 10%;
   background-color: #000;
   height: 100%;
-  width: 16vw;
+  width: 20vw;
 }
 .right {
   grid-area: friend-activity;
@@ -93,6 +94,7 @@ main {
   width: 18vw;
   background-color: #000;
   height: 100%;
+
 }
 
 footer {
@@ -222,30 +224,54 @@ img:hover {
 }
 
 @media only screen and (max-width: 800px) {
-  .links > span {
+  .links > a {
     display: none;
   }
-  .friend-label > p {
+  .links span {
+    font-size: 180%;
+  }
+  .liked span:last-of-type {
     display: none;
   }
-  .friend-label {
+  .links-container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
-  .recent-dashboard {
+
+  .main-navigation i {
+    font-size: 1.5rem;
+    margin-left: 0.25em;
+  }
+  .profile p,
+  .profile span {
     display: none;
+  }
+  .right {
+    display: none;
+  }
+  main {
+    width: 80vw;
+  }
+  .saved-tracks{
+    padding-right: 0.5em;
   }
 }
+
 @media only screen and (max-width: 1300px) {
   .recent {
     flex-direction: column;
     font-size: 90%;
   }
   .recent-name-day > p:nth-child(2) {
-    margin-left: 2rem;
+    display: none;
+  }
+  .recent-name-day > p:nth-child(1) {
+    text-align: center;
+    margin-top: 0.5em;
   }
   .recent-dashboard {
     justify-content: center;
-    margin-top: 0.5rem;
+    font-size: 70%;
   }
 }
