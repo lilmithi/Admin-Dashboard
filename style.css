@@ -23,7 +23,7 @@
 }
 main {
   grid-area: main;
-  width: 62vw;
+  width: 64vw;
   background-color: #222;
   padding: 1.5em 2em;
 }
@@ -41,7 +41,7 @@ main {
 }
 .main-navigation i {
   font-size: 190%;
-  color: grey;
+  color: rgb(102, 101, 101);
   background-color: transparent;
   cursor: pointer;
 }
@@ -69,6 +69,7 @@ main {
   color: #fff;
   font-weight: bold;
   cursor: default;
+  margin-left: 0.5rem;
 }
 .profile span {
   color: white;
@@ -78,23 +79,46 @@ main {
 .profile span:hover {
   opacity: 0.5;
 }
+.advert {
+  position: relative;
+  margin: 1rem auto;
+  width: 95%;
+  height: 25vh;
+  background-image: url(./icons/leonard-cotte-c1Jp-fo53U8-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.advert p {
+  position: absolute;
+  top: 15%;
+  right: 5%;
+  color: rgb(212, 209, 209);
+  text-transform: uppercase;
+  padding: 0.5em 1em;
+  border-radius: 0.75em;
+  font-size: 87.5%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.advert p:hover {
+  background-color: rgba(0, 0, 0, 0.47);
+}
 .left {
   grid-area: nav;
   padding-top: 8vh;
   padding-left: 10%;
   background-color: #000;
   height: 100%;
-  width: 20vw;
+  width: 18vw;
 }
 .right {
   grid-area: friend-activity;
   padding-top: 2vh;
   padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  padding-right: 0.75rem;
   width: 18vw;
   background-color: #000;
   height: 100%;
-
 }
 
 footer {
@@ -130,7 +154,7 @@ footer {
   font-weight: bold;
 }
 
-.links > span:hover {
+.links > *:hover {
   color: white;
 }
 .liked > span:first-of-type {
@@ -166,7 +190,6 @@ li {
   padding-top: 2vh;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   margin-bottom: 2rem;
 }
 .friend-label > span {
@@ -253,7 +276,7 @@ img:hover {
   main {
     width: 80vw;
   }
-  .saved-tracks{
+  .saved-tracks {
     padding-right: 0.5em;
   }
 }
